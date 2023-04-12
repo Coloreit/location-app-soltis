@@ -59,8 +59,8 @@ const LocationService = ({ onLocation }) => {
         <Text> Esperando ubicación... </Text>
       </MapPreview>
       <View style={styles.actions}>
-      <Button title='Obtener Ubicación' color={Colors.naranja} onPress={handleGeolocation} />
-      <Button title='Elegir en el mapa' color={Colors.verde} onPress={handlePickOnMap} />
+        <Button title='Obtener Ubicación' color={Colors.naranja} onPress={handleGeolocation} />
+        <Button title='Elegir en el mapa' color={Colors.verde} onPress={handlePickOnMap} />
       </View>
     </View>
   )

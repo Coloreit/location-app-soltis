@@ -2,9 +2,17 @@ import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 
 const PlaceDetailScreen = () => {
+    const { placeId } = route.params
+
+    const selectedPlace = useSelector(state => state.places.places.find(place => place.id === placeId))
+
+    console.log(selectedPlace)
+
     return (
         <View style={styles.container}>
-            <Text>Detalle Direccion</Text>
+            <Text>{selectedPlace.address}</Text>
+            <Text>{selectedPlace.coords.lat} , {selectedPlace.coords.lng}</Text>
+            <Text>{selectedPlace.title}</Text>
         </View>
     )
 }

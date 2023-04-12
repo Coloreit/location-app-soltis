@@ -4,8 +4,6 @@ export const ADD_PLACE = 'ADD_PLACE'
 
 
 export const addPlace = (title, image) => {
-    //return { type: ADD_PLACE, payload: {title}}
-    console.log(image)
     return async dispatch => {
         const fileName = image.split('/').pop()
         const Path = FileSystem.documentDirectory + fileName

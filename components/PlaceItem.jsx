@@ -1,19 +1,18 @@
-import { StyleSheet, Text, View,TouchableOpacity, Image } from 'react-native'
+import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
 
 import { COLORS } from '../constants'
 
 const PlaceItem = ({title, image, address, onSelect}) => {
-console.log(title)
-  return (
-    <TouchableOpacity onPress={onSelect} style={styles.placeItem}>
-        <Image style={styles.image} source={{uri: image}} />
-        <View style={styles.info}>
-            <Text style={styles.title}>{title}</Text>
-            <Text style={styles.address}>{address}</Text>
-        </View>
-    </TouchableOpacity>
-  )
+    return (
+        <TouchableOpacity onPress={onSelect} style={styles.placeItem}>
+            <Image style={styles.image} source={{uri: image}} />
+            <View style={styles.info}>
+                <Text style={styles.title}>{title}</Text>
+                <Text style={styles.address}>{address}</Text>
+            </View>
+        </TouchableOpacity>
+    )
 }
 
 export default PlaceItem

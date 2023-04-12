@@ -2,10 +2,10 @@ import { StyleSheet, Text, View, Image, Button, Alert } from 'react-native'
 import React, { useState } from 'react'
 import * as ImagePicker from 'expo-image-picker'
 
-
 import { COLORS } from '../constants'
 
 const ImageSelector = ({onImage}) => {
+
     const [pickedUri, setPickedUri] = useState()
 
     const VerifyPermissions = async () => {
@@ -17,7 +17,7 @@ const ImageSelector = ({onImage}) => {
         }
         return true
 
-     }
+    }
 
     const handlerTakeImage = async () => {
         const isCameraOk = await VerifyPermissions()
@@ -31,7 +31,7 @@ const ImageSelector = ({onImage}) => {
         console.log(image.assets)
         setPickedUri(image.assets[0].uri)
         onImage(image.assets[0].uri)
-     }
+    }
 
     return (
         <View style={styles.container}>

@@ -23,14 +23,14 @@ const PlaceNavigator = () => (
             headerTintColor: Platform.OS === 'android' ? 'white' : COLORS.celeste,
             headerTitleStyle: {
                 fontWeight: 'bold',
-            }
+            },
         }}
     >
         <PlaceStack.Screen
             name="Direcciones"
             component={PlaceListScreen}
             options={({ navigation }) => ({
-                title: 'Direcciones',
+                title: 'Envíos',
                 headerRight: () => (
                     <TouchableOpacity onPress={() => navigation.navigate('Nuevo')}>
                         <Ionicons name="md-add" color={Platform.OS === 'android' ? 'white' : COLORS.celeste} size={23} />

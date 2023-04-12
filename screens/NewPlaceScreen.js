@@ -5,7 +5,6 @@ import { useDispatch } from 'react-redux'
 import { addPlace } from '../store/places.actions'
 import ImageSelector from '../components/ImageSelector'
 
-
 const NewPlaceScreen = ({ navigation }) => {
     const dispatch = useDispatch()
     const [titleValue, setTitleValue] = React.useState('')
@@ -15,15 +14,10 @@ const NewPlaceScreen = ({ navigation }) => {
         setTitleValue(text)
     }
 
-
     const savePlaceHandler = () => {
         dispatch(addPlace(titleValue,imageValue))
         navigation.navigate('Direcciones')
     }
-
-
-
-
 
     return (
         <ScrollView>
@@ -33,7 +27,6 @@ const NewPlaceScreen = ({ navigation }) => {
                 <ImageSelector onImage={image=>setImageValue(image)} />
                 <Button title="Guardar" color={COLORS.celeste} onPress={savePlaceHandler} />
             </View>
-           
         </ScrollView>
     )
 }

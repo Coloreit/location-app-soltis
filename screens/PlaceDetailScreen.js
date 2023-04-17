@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
         textAlign: 'center'
     },
     map: {
-        height: '300'
+        height: 300,
     }
 })
 
